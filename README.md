@@ -16,3 +16,5 @@ This project is a social web application of the Tripleten Bootcamp of Software E
 ## Deployment
 
 https://joseidd.github.io/se_project_spots/
+
+https://drive.google.com/file/d/1CtLP0iNhwPLQMZlPRgZg3XPvTRwo6Uqj/view?usp=sharing

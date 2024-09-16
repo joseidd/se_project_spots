@@ -17,7 +17,7 @@
 }
 
 .profile__add-btn:hover {
-  background-color: #484444;
+  opacity: 0.8;
 }
 
 .profile__add-btn-icon {
@@ -54,6 +54,10 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+}
+
+.profile__edit-btn:hover {
+  opacity: 0.8;
 }
 
 .profile__name {
