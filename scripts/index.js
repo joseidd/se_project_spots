@@ -57,7 +57,6 @@ function openModal(modal) {
 }
 
 function closeModal(modal) {
-  editModal.classList.remove("modal_opened");
   modal.classList.remove("modal_opened");
 }
 
@@ -65,7 +64,7 @@ function handleFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
-  closeModal();
+  closeModal(editModal);
 }
 
 function handleAddCardSubmit(evt) {
@@ -74,6 +73,7 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(cardModal);
+  cardForm.reset();
 }
 
 function getCardElement(data) {
