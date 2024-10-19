@@ -27,6 +27,19 @@
   border-radius: 8px;
 }
 
+.modal__container_type_preview {
+  padding: 0;
+  max-width: 80vw;
+  max-height: 80vh;
+  width: fit-content;
+  background-color: transparent;
+}
+
+.modal__image {
+  height: 100%;
+  width: 100%;
+}
+
 .modal__close-btn {
   position: absolute;
   top: 32px;
@@ -36,6 +49,27 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.modal__close-btn_type_preview {
+  background-image: url(../images/Close\ Icon-preview.svg);
+  top: 0;
+  right: -52px;
+}
+
+.modal__caption {
+  margin: 10px 0 0 0;
+  text-align: left;
+  color: #fff;
+  background-color: rgb(33, 33, 33);
+  padding: 4px 8px;
+  margin-top: 8px;
+  border-radius: 8px;
+  width: fit-content;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 .modal__title {
