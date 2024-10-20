@@ -42,6 +42,7 @@
 .modal__image {
   height: 100%;
   width: 100%;
+  border-radius: 8px;
 }
 
 .modal__close-btn {
@@ -122,10 +123,6 @@
     padding: 0 10px;
   }
 
-  .modal__container {
-    padding: 12px;
-  }
-
   .modal__container_type_preview {
     max-width: none;
     max-height: none;
@@ -137,6 +134,10 @@
     line-height: 1;
     margin-bottom: 24px;
     margin: 10px 0 34px;
+  }
+
+  .modal__container {
+    padding: 12px;
   }
 
   .modal__close-btn {
