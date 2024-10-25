@@ -54,10 +54,29 @@ const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  modal.addEventListener("mousedown", handleCloseOverlay);
+  document.addEventListener("keydown", handleEscKeyPress);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  modal.removeEventListener("mousedown", handleCloseOverlay);
+  document.removeEventListener("keydown", handleEscKeyPress);
+}
+
+function handleCloseOverlay(evt) {
+  if (evt.target.classList.contains("modal_opened")) {
+    closeModal(evt.target);
+  }
+}
+
+function handleEscKeyPress(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
 }
 
 function handleFormSubmit(evt) {
