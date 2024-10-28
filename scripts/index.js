@@ -155,7 +155,7 @@ previewModalCloseBtn.addEventListener("click", () => {
 
 editModalFormElement.addEventListener("submit", handleFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
-editForm.addEventListener("submit", handleAddCardSubmit);
+
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.prepend(cardElement);
