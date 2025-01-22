@@ -5,9 +5,9 @@ import {
   disableButton,
   resetValidation,
 } from "../scripts/validation.js";
-import Api from "../../utils/Api.js";
+import Api from "../utils/Api.js";
 import { data } from "autoprefixer";
-import { setButtonText } from "../../utils/helpers.js";
+import { setButtonText } from "../utils/helpers.js";
 
 // const initialCards = [
 //   {
