@@ -6,8 +6,8 @@ import {
   resetValidation,
 } from "../scripts/validation.js";
 import Api from "../utils/Api.js";
-import { data } from "autoprefixer";
 import { setButtonText } from "../utils/helpers.js";
+import { data } from "autoprefixer";
 
 // const initialCards = [
 //   {
@@ -47,6 +47,7 @@ const api = new Api({
 api
   .getAppInfo()
   .then(([cards, users]) => {
+    avatar.src = users.avatar;
     console.log(users);
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
@@ -90,6 +91,7 @@ const avatarInput = avatarModal.querySelector("#profile-avatar-input");
 const deleteModal = document.querySelector("#delete-modal");
 const deleteForm = deleteModal.querySelector(".modal__form");
 const deleteModalCloseBtn = deleteModal.querySelector(".modal__close-btn");
+const deleteModalCancelBtn = deleteModal.querySelector(".modal__submit-cancel");
 const cardSubmitBtn = cardModal.querySelector(".modal__submit-btn");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
@@ -211,8 +213,9 @@ function handleAvatarSubmit(evt) {
     .editAvatarInfo(avatarInput.value)
     .then((data) => {
       avatar.src = data.avatar;
-      avatar.alt = `${data.name} avatar`;
+      avatar.alt = `${data.name}'s avatar`;
       avatarForm.reset();
+      disableButton(avatarSubmitBtn, settings);
       closeModal(avatarModal);
     })
     .catch((err) => {
@@ -247,7 +250,7 @@ function getCardElement(data) {
   cardDeleteBtn.addEventListener("click", (evt) => {
     handleDeleteCard(cardElement, data._id);
     // cardElement.remove();
-    closeModal(cardModal);
+    // closeModal(cardModal);
   });
   cardImageEl.addEventListener("click", () => {
     openModal(previewModal);
@@ -295,6 +298,10 @@ avatarForm.addEventListener("submit", handleAvatarSubmit);
 
 cardModalCloseBtn.addEventListener("click", () => {
   closeModal(cardModal);
+});
+
+deleteModalCancelBtn.addEventListener("click", () => {
+  closeModal(deleteModal);
 });
 
 previewModalCloseBtn.addEventListener("click", () => {

@@ -12,7 +12,7 @@ class Api {
   }
 
   getUserInfo() {
-    return fetch("https://around-api.en.tripleten-services.com/v1/users/me", {
+    return fetch(`${this._baseUrl}/users/me`, {
       headers: {
         authorization: "7a5ed4fa-651f-4308-b8f7-95d38182702d",
       },
@@ -24,7 +24,7 @@ class Api {
   }
 
   getInitialCards() {
-    return fetch("https://around-api.en.tripleten-services.com/v1/cards", {
+    return fetch(`${this._baseUrl}/cards`, {
       headers: {
         authorization: "7a5ed4fa-651f-4308-b8f7-95d38182702d",
       },
