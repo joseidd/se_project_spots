@@ -113,7 +113,7 @@
 }
 
 .modal__close-btn_type_preview {
-  background-image: url(../images/Close\ Icon-preview.svg);
+  background-image: url(../images/close-icon-preview.svg);
   top: 0;
   right: -52px;
 }
