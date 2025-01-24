@@ -127,7 +127,7 @@ function handleEscKeyPress(evt) {
   }
 }
 
-function handleFormSubmit(evt) {
+function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   const submitBtn = evt.submitter;
   setButtonText(submitBtn, true);
@@ -308,7 +308,7 @@ previewModalCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
-editModalFormElement.addEventListener("submit", handleFormSubmit);
+editModalFormElement.addEventListener("submit", handleProfileFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 deleteForm.addEventListener("submit", handleDeleteSubmit);
 enableValidation(settings);

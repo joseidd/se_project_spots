@@ -182,9 +182,9 @@
             Avatar
             <input
               id="profile-avatar-input"
-              type="text"
+              type="url"
               class="modal__input"
-              name="avatar"
+              name="link"
               placeholder="avatar goes here"
               required
             />
@@ -204,12 +204,12 @@
       <div class="modal__container">
         <button type="submit" class="modal__close-btn modal__close_type_delete">
           <img
-            src="<%=require('./images/close-icon.svg')%>"
+            src="<%=require('./images/close-icon-white.svg')%>"
             alt="close icon"
             class="modal__close-btn-icon"
           />
         </button>
-        <h2 class="modal__title">
+        <h2 class="modal__title modal__title_type_delete">
           Are you sure you want to delete this image?
         </h2>
         <form id="delete-form" class="modal__form modal__form_type_delete">
