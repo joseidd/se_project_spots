@@ -48,7 +48,9 @@ api
   .getAppInfo()
   .then(([cards, users]) => {
     avatar.src = users.avatar;
-    // console.log(users);
+    avatar.alt = `${users.name}'s avatar`;
+    profileName.textContent = users.name;
+    profileDescription.textContent = users.about;
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
       cardsList.prepend(cardElement);
