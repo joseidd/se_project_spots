@@ -48,7 +48,7 @@ api
   .getAppInfo()
   .then(([cards, users]) => {
     avatar.src = users.avatar;
-    console.log(users);
+    // console.log(users);
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
       cardsList.prepend(cardElement);
@@ -183,7 +183,7 @@ function handleLike(evt, id) {
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
   const submitBtn = evt.submitter;
-  setButtonText(submitBtn, true, "Deleting...", "Delete");
+  setButtonText(submitBtn, true, "Delete", "Deleting...");
 
   api
     .deleteCard(selectedCardId)
@@ -193,7 +193,7 @@ function handleDeleteSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      setButtonText(submitBtn, false, "Deleting...", "Delete");
+      setButtonText(submitBtn, false, "Delete", "Deleting...");
       submitBtn.disabled = false;
     });
 }
